@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block body %}
+    <div class="w-4/5 m-auto text-center mt-5">
+        <div class="py-12 border-b border-gray-200">
+            <h1 class="text-6xl pt-12 pb-8">
+                Edit profile
+            </h1>
+            <div class="col-md-4 offset-md-4">
+                {{ form_start(form) }}
+                <div class="form-group">
+                    <span class="float-left">Full name</span><br>
+                    {{ form_row(form.full_name,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    <span class="float-left">Username</span><br>
+                    {{ form_row(form.username,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    <span class="float-left">Birth date</span><br>
+                    {{ form_row(form.birth_date,{'attr':{'class':'form-control input-inline datepicker'}}) }}
+                </div>
+                <div class="form-group">
+                    <span class="float-left">Mobile</span><br>
+                    {{ form_row(form.mobile,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    <span class="float-left">Address</span><br>
+                    {{ form_row(form.addres,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group" style="display: none">
+                    <span class="float-left">Password</span><br>
+                    {{ form_row(form.plainPassword,{'attr':{'class':'form-control','value':'aaaaaaaaaaaaa'}}) }}
+                </div>
+                <div class="form-group float-left">
+                    {{ form_row(form.agreeTerms) }}
+                </div>
+                <div class="form-group mt-5 mr-5">
+                    <button type="submit" class="rounded-3 pt-1 pb-1 pr-4 pl-4 fs-5 border-0">
+                        Edit
+                    </button>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

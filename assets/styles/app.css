@@ -1,0 +1,10 @@
+body {
+    background-color: lightgray;
+}
+
+.table_row:hover {
+    background-color: #c1c1c1;
+}
+#js-edit-view{
+    cursor: pointer;
+}

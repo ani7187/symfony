@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand col-md-10" href="{{ app.user ? '/my_list':'/' }}">ToDo List 📝</a>
+    <a href="#" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </a>
+    <div class="collapse navbar-collapse col-md-1" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" id="sign" href="/{{ app.user ? 'profile':'register' }}">{{ app.user ? app.user.username:'Sign up'}}</a>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse col-md-1" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active text-right" data-toggle="modal" data-target="#logInModal" href="/{{ app.user ? 'logout' : 'login' }}">{{ app.user ? 'Logout' : 'Login' }}</a>
+        </div>
+    </div>
+</nav>
+
+

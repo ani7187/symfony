@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div>
+                    <h1><a href="/login" class="text-decoration-none">Login</a> or <a href="/register" class="text-decoration-none">register</a> and create your ToDo list</h1>
+                </div>
+                <div class="mt-5">
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aperiam et ipsa minima, possimus quibusdam rem?
+                        Ad architecto deleniti et fuga id molestias placeat, quasi ratione ullam veritatis.
+                        Non, similique voluptatem?
+                    </h5>
+                </div>
+                <div>
+                    <img src="{{ asset('images/to_do_down.png') }}">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ asset('images/to_do.png') }}">
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+{% endblock %}

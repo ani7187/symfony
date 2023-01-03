@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="w-4/5 m-auto text-center mt-5">
+        <div class="py-12 border-b border-gray-200">
+            <h1 class="text-6xl pt-12 pb-8">
+                Register
+            </h1>
+            <div class="col-md-4 offset-md-4">
+                {{ form_start(registrationForm) }}
+                <div class="form-group">
+                    <span class="float-left">Full name</span><br>
+                    {{ form_row(registrationForm.full_name,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    <span class="float-left">Username</span><br>
+                    {{ form_row(registrationForm.username,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    <span class="float-left">Birth date</span><br>
+                    {{ form_row(registrationForm.birth_date,{'attr':{'class':'form-control input-inline datepicker'}}) }}
+                </div>
+                <div class="form-group">
+                    <span class="float-left">Mobile</span><br>
+                    {{ form_row(registrationForm.mobile,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    <span class="float-left">Address</span><br>
+                    {{ form_row(registrationForm.addres,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    <span class="float-left">Password</span><br>
+                    {{ form_row(registrationForm.plainPassword,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group float-left">
+                    <span class="float-left">Add avatar</span><br>
+                    {{ form_row(registrationForm.image,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group float-left">
+                    {{ form_row(registrationForm.agreeTerms) }}
+                </div>
+                <div class="form-group mt-5 mr-5">
+                    <button type="submit" class="rounded-3 pt-1 pb-1 pr-4 pl-4 fs-5 border-0">
+                        Register
+                    </button>
+                </div>
+
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
